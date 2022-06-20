@@ -1,0 +1,15 @@
+C:\projects\ndc\CaWorkshop\CaWorkshop.Application\bin\Debug\net6.0\CaWorkshop.Application.deps.json
+C:\projects\ndc\CaWorkshop\CaWorkshop.Application\bin\Debug\net6.0\CaWorkshop.Application.dll
+C:\projects\ndc\CaWorkshop\CaWorkshop.Application\bin\Debug\net6.0\CaWorkshop.Application.pdb
+C:\projects\ndc\CaWorkshop\CaWorkshop.Application\bin\Debug\net6.0\CaWorkshop.Domain.dll
+C:\projects\ndc\CaWorkshop\CaWorkshop.Application\bin\Debug\net6.0\CaWorkshop.Domain.pdb
+C:\projects\ndc\CaWorkshop\CaWorkshop.Application\obj\Debug\net6.0\CaWorkshop.Application.csproj.AssemblyReference.cache
+C:\projects\ndc\CaWorkshop\CaWorkshop.Application\obj\Debug\net6.0\CaWorkshop.Application.GeneratedMSBuildEditorConfig.editorconfig
+C:\projects\ndc\CaWorkshop\CaWorkshop.Application\obj\Debug\net6.0\CaWorkshop.Application.AssemblyInfoInputs.cache
+C:\projects\ndc\CaWorkshop\CaWorkshop.Application\obj\Debug\net6.0\CaWorkshop.Application.AssemblyInfo.cs
+C:\projects\ndc\CaWorkshop\CaWorkshop.Application\obj\Debug\net6.0\CaWorkshop.Application.csproj.CoreCompileInputs.cache
+C:\projects\ndc\CaWorkshop\CaWorkshop.Application\obj\Debug\net6.0\CaWorkshop.Application.csproj.CopyComplete
+C:\projects\ndc\CaWorkshop\CaWorkshop.Application\obj\Debug\net6.0\CaWorkshop.Application.dll
+C:\projects\ndc\CaWorkshop\CaWorkshop.Application\obj\Debug\net6.0\refint\CaWorkshop.Application.dll
+C:\projects\ndc\CaWorkshop\CaWorkshop.Application\obj\Debug\net6.0\CaWorkshop.Application.pdb
+C:\projects\ndc\CaWorkshop\CaWorkshop.Application\obj\Debug\net6.0\ref\CaWorkshop.Application.dll

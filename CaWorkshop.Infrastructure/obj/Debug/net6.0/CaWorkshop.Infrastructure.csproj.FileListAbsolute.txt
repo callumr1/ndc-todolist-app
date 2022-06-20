@@ -1,0 +1,17 @@
+C:\projects\ndc\CaWorkshop\CaWorkshop.Infrastructure\bin\Debug\net6.0\CaWorkshop.Infrastructure.deps.json
+C:\projects\ndc\CaWorkshop\CaWorkshop.Infrastructure\bin\Debug\net6.0\CaWorkshop.Infrastructure.dll
+C:\projects\ndc\CaWorkshop\CaWorkshop.Infrastructure\bin\Debug\net6.0\CaWorkshop.Infrastructure.pdb
+C:\projects\ndc\CaWorkshop\CaWorkshop.Infrastructure\bin\Debug\net6.0\CaWorkshop.Application.dll
+C:\projects\ndc\CaWorkshop\CaWorkshop.Infrastructure\bin\Debug\net6.0\CaWorkshop.Domain.dll
+C:\projects\ndc\CaWorkshop\CaWorkshop.Infrastructure\bin\Debug\net6.0\CaWorkshop.Application.pdb
+C:\projects\ndc\CaWorkshop\CaWorkshop.Infrastructure\bin\Debug\net6.0\CaWorkshop.Domain.pdb
+C:\projects\ndc\CaWorkshop\CaWorkshop.Infrastructure\obj\Debug\net6.0\CaWorkshop.Infrastructure.csproj.AssemblyReference.cache
+C:\projects\ndc\CaWorkshop\CaWorkshop.Infrastructure\obj\Debug\net6.0\CaWorkshop.Infrastructure.GeneratedMSBuildEditorConfig.editorconfig
+C:\projects\ndc\CaWorkshop\CaWorkshop.Infrastructure\obj\Debug\net6.0\CaWorkshop.Infrastructure.AssemblyInfoInputs.cache
+C:\projects\ndc\CaWorkshop\CaWorkshop.Infrastructure\obj\Debug\net6.0\CaWorkshop.Infrastructure.AssemblyInfo.cs
+C:\projects\ndc\CaWorkshop\CaWorkshop.Infrastructure\obj\Debug\net6.0\CaWorkshop.Infrastructure.csproj.CoreCompileInputs.cache
+C:\projects\ndc\CaWorkshop\CaWorkshop.Infrastructure\obj\Debug\net6.0\CaWorkshop.Infrastructure.csproj.CopyComplete
+C:\projects\ndc\CaWorkshop\CaWorkshop.Infrastructure\obj\Debug\net6.0\CaWorkshop.Infrastructure.dll
+C:\projects\ndc\CaWorkshop\CaWorkshop.Infrastructure\obj\Debug\net6.0\refint\CaWorkshop.Infrastructure.dll
+C:\projects\ndc\CaWorkshop\CaWorkshop.Infrastructure\obj\Debug\net6.0\CaWorkshop.Infrastructure.pdb
+C:\projects\ndc\CaWorkshop\CaWorkshop.Infrastructure\obj\Debug\net6.0\ref\CaWorkshop.Infrastructure.dll
