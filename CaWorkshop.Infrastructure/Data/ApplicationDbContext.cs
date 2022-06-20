@@ -1,4 +1,5 @@
-﻿using CaWorkshop.Domain.Entities;
+﻿using CaWorkshop.Application.Common.Interfaces;
+using CaWorkshop.Domain.Entities;
 using CaWorkshop.Infrastructure.Identity;
 using Duende.IdentityServer.EntityFramework.Options;
 using Microsoft.AspNetCore.ApiAuthorization.IdentityServer;
@@ -8,7 +9,7 @@ using System.Reflection;
 
 namespace CaWorkshop.Infrastructure.Data
 {
-    public class ApplicationDbContext : ApiAuthorizationDbContext<ApplicationUser>
+    public class ApplicationDbContext: ApiAuthorizationDbContext<ApplicationUser>, IApplicationDbContext
     {
         public ApplicationDbContext(DbContextOptions options, IOptions<OperationalStoreOptions> operationalStoreOptions)
             : base(options, operationalStoreOptions)
@@ -25,6 +26,15 @@ namespace CaWorkshop.Infrastructure.Data
 
             builder.ApplyConfigurationsFromAssembly(
                 Assembly.GetExecutingAssembly());
+        }
+
+        protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
+        {
+            optionsBuilder
+                .LogTo(Console.WriteLine)
+                .EnableDetailedErrors();
+
+            base.OnConfiguring(optionsBuilder);
         }
 
     }

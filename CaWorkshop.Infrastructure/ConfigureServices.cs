@@ -4,6 +4,7 @@ using Microsoft.AspNetCore.Authentication;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
+using CaWorkshop.Application.Common.Interfaces;
 
 namespace CaWorkshop.Infrastructure;
 
@@ -18,6 +19,9 @@ public static class ConfigureServices
                 configuration.GetConnectionString("DefaultConnection")));
 
         services.AddScoped<ApplicationDbContextInitialiser>();
+
+        services.AddScoped<IApplicationDbContext>(provider =>
+            provider.GetRequiredService<ApplicationDbContext>());
 
         services.AddDefaultIdentity<ApplicationUser>(options => options.SignIn.RequireConfirmedAccount = true)
             .AddEntityFrameworkStores<ApplicationDbContext>();
