@@ -1,41 +1,51 @@
-﻿using CaWorkshop.Application.Common.Interfaces;
+﻿using System.Reflection;
+using CaWorkshop.Application.Common.Interfaces;
 using CaWorkshop.Domain.Entities;
 using CaWorkshop.Infrastructure.Identity;
+using CaWorkshop.Infrastructure.Data.Interceptors;
 using Duende.IdentityServer.EntityFramework.Options;
 using Microsoft.AspNetCore.ApiAuthorization.IdentityServer;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Options;
-using System.Reflection;
 
-namespace CaWorkshop.Infrastructure.Data
+namespace CaWorkshop.Infrastructure.Data;
+
+public class ApplicationDbContext : ApiAuthorizationDbContext<ApplicationUser>, IApplicationDbContext
 {
-    public class ApplicationDbContext: ApiAuthorizationDbContext<ApplicationUser>, IApplicationDbContext
+    private readonly AuditableEntitySaveChangesInterceptor _auditableEntitySaveChangesInterceptor;
+
+    public ApplicationDbContext(DbContextOptions options, IOptions<OperationalStoreOptions> operationalStoreOptions) : base(options, operationalStoreOptions)
     {
-        public ApplicationDbContext(DbContextOptions options, IOptions<OperationalStoreOptions> operationalStoreOptions)
-            : base(options, operationalStoreOptions)
-        {
+    }
 
-        }
-        public DbSet<TodoItem> TodoItems => Set<TodoItem>();
+    public ApplicationDbContext(
+            DbContextOptions options,
+            IOptions<OperationalStoreOptions> operationalStoreOptions,
+            AuditableEntitySaveChangesInterceptor auditableEntitySaveChangesInterceptor)
+        : base(options, operationalStoreOptions)
+    {
+        _auditableEntitySaveChangesInterceptor = auditableEntitySaveChangesInterceptor;
+    }
 
-        public DbSet<TodoList> TodoLists => Set<TodoList>();
+    public DbSet<TodoItem> TodoItems => Set<TodoItem>();
 
-        protected override void OnModelCreating(ModelBuilder builder)
-        {
-            base.OnModelCreating(builder);
+    public DbSet<TodoList> TodoLists => Set<TodoList>();
 
-            builder.ApplyConfigurationsFromAssembly(
-                Assembly.GetExecutingAssembly());
-        }
+    protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
+    {
+        optionsBuilder
+            .LogTo(Console.WriteLine)
+            .EnableDetailedErrors()
+            .AddInterceptors(_auditableEntitySaveChangesInterceptor);
 
-        protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
-        {
-            optionsBuilder
-                .LogTo(Console.WriteLine)
-                .EnableDetailedErrors();
+        base.OnConfiguring(optionsBuilder);
+    }
 
-            base.OnConfiguring(optionsBuilder);
-        }
+    protected override void OnModelCreating(ModelBuilder builder)
+    {
+        base.OnModelCreating(builder);
 
+        builder.ApplyConfigurationsFromAssembly(
+            Assembly.GetExecutingAssembly());
     }
 }

@@ -1,9 +1,11 @@
-﻿using CaWorkshop.Domain.Entities;
+﻿using AutoMapper;
+using CaWorkshop.Application.Common.Mappings;
+using CaWorkshop.Domain.Entities;
 using System.Linq.Expressions;
 
 namespace CaWorkshop.Application.TodoLists.Queries.GetTodoLists;
 
-public class TodoItemDto
+public class TodoItemDto: IMapFrom<TodoItem>
 {
     public int Id { get; set; }
 

@@ -5,6 +5,7 @@ using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using CaWorkshop.Application.Common.Interfaces;
+using CaWorkshop.Infrastructure.Data.Interceptors;
 
 namespace CaWorkshop.Infrastructure;
 
@@ -19,6 +20,10 @@ public static class ConfigureServices
                 configuration.GetConnectionString("DefaultConnection")));
 
         services.AddScoped<ApplicationDbContextInitialiser>();
+
+        services.AddScoped<IIdentityService, IdentityService>();
+
+        services.AddScoped<AuditableEntitySaveChangesInterceptor>();
 
         services.AddScoped<IApplicationDbContext>(provider =>
             provider.GetRequiredService<ApplicationDbContext>());
